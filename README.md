@@ -2,6 +2,27 @@
 
 在中国大陆使用 Cursor 时，通过 Clash 实现**仅 Cursor 走美国节点**的分流方案。解决使用特定模型（如 Claude Opus 4.6）时必须开 TUN 增强模式，但开了之后微信、WPS、腾讯文档等国内应用无法正常使用的问题。
 
+## 一键配置（推荐）
+
+把下面这段话直接发给 Cursor（Agent 模式），它会自动读取指南并帮你完成全部配置：
+
+```
+请用 curl 获取 https://raw.githubusercontent.com/HMyaoyuan/CursorClash/main/README.md 的内容，
+然后按照其中的「完整配置步骤」帮我自动配置 Clash，让 Cursor 走美国节点、其他应用不受影响。
+你需要：
+1. 找到我的 Clash 配置文件（~/.config/clash/ 目录下正在使用的 yaml）
+2. 自动识别我的美国节点名称
+3. 新增 Cursor 代理策略组
+4. 在 rules 最前面插入 PROCESS-NAME 规则
+5. 告诉我最后需要手动做什么（重载配置、切换模式）
+```
+
+或者更简短的版本：
+
+```
+帮我按照 https://raw.githubusercontent.com/HMyaoyuan/CursorClash/main/README.md 的教程，自动配置 Clash 让 Cursor 走美国节点。先 curl 获取内容再操作。
+```
+
 ## 问题背景
 
 | 场景 | 现象 |
